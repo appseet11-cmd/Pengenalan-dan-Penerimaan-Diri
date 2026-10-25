@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e74c3c">
+<title>Evaluasi Hasil Layanan | Pengenalan & Penerimaan Diri — BK SMPN 56</title>
+<meta name="description" content="Instrumen Evaluasi Hasil Layanan Bimbingan Klasikal untuk siswa SMP Negeri 56 Jakarta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--primary: #1a5276;
+--secondary: #2980b9;
+--accent: #f39c12;
+--light: #ecf0f1;
+--dark: #2c3e50;
+--success: #27ae60;
+--danger: #e74c3c;
+--danger-dark: #c0392b;
+--white: #ffffff;
+--border: #e0e0e0;
+}
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+line-height: 1.7;
+color: #333;
+background-color: #f5f6fa;
+-webkit-font-smoothing: antialiased;
+}
+
+/* === TOP BAR === */
+.top-bar {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+padding: 10px 20px;
+font-size: 0.82rem;
+text-align: center;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px 15px;
+}
+.top-bar a {
+color: #ffd700;
+text-decoration: none;
+font-weight: 600;
+transition: opacity 0.3s;
+}
+.top-bar a:hover { text-decoration: underline; opacity: 0.9; }
+.top-bar .separator { opacity: 0.5; }
+
+/* === HEADER === */
+.page-header {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: var(--white);
+padding: 45px 20px 40px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.page-header::before {
+content: '📊';
+position: absolute;
+font-size: 14rem;
+opacity: 0.08;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.breadcrumb-materi {
+display: inline-flex;
+gap: 8px;
+align-items: center;
+background: rgba(255,255,255,0.15);
+padding: 6px 16px;
+border-radius: 20px;
+font-size: 0.82rem;
+margin-bottom: 18px;
+backdrop-filter: blur(10px);
+position: relative;
+}
+.breadcrumb-materi a { color: #fff; text-decoration: none; }
+.breadcrumb-materi a:hover { text-decoration: underline; }
+.page-header h1 {
+font-size: 2rem;
+font-weight: 800;
+margin-bottom: 10px;
+position: relative;
+}
+.page-header .subtitle {
+font-size: 0.98rem;
+opacity: 0.95;
+max-width: 700px;
+margin: 0 auto;
+position: relative;
+}
+.badge-info {
+display: inline-block;
+background: rgba(255,255,255,0.2);
+padding: 5px 14px;
+border-radius: 15px;
+font-size: 0.78rem;
+font-weight: 600;
+margin-top: 15px;
+position: relative;
+}
+
+/* === CONTAINER === */
+.container {
+max-width: 950px;
+margin: 0 auto;
+padding: 30px 20px;
+}
+
+/* === FORM CARD === */
+.form-card {
+background: var(--white);
+border-radius: 15px;
+padding: 35px;
+margin-bottom: 25px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+border-left: 5px solid var(--danger);
+}
+.form-card h2 {
+color: var(--danger-dark);
+font-size: 1.35rem;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-weight: 700;
+}
+.form-card h2 .sec-icon {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+width: 40px;
+height: 40px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+
+/* === IDENTITAS SISWA === */
+.identitas-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 15px;
+margin-bottom: 20px;
+}
+.identitas-item label {
+display: block;
+font-size: 0.85rem;
+color: var(--dark);
+font-weight: 600;
+margin-bottom: 6px;
+}
+.identitas-item label .required {
+color: var(--danger);
+}
+.identitas-item input, .identitas-item select {
+width: 100%;
+padding: 11px 14px;
+border: 2px solid var(--border);
+border-radius: 8px;
+font-size: 0.92rem;
+font-family: inherit;
+transition: border-color 0.3s;
+}
+.identitas-item input:focus, .identitas-item select:focus {
+outline: none;
+border-color: var(--danger);
+box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+
+/* === PETUNJUK === */
+.petunjuk-box {
+background: linear-gradient(135deg, #fff3cd, #ffe69c);
+border-left: 4px solid var(--accent);
+padding: 15px 20px;
+border-radius: 8px;
+margin-bottom: 25px;
+font-size: 0.88rem;
+color: #6d4c00;
+}
+.petunjuk-box strong { color: #856404; }
+
+.legend-box {
+background: #f8f9fa;
+padding: 12px 18px;
+border-radius: 8px;
+margin-bottom: 20px;
+display: flex;
+gap: 15px;
+flex-wrap: wrap;
+font-size: 0.82rem;
+color: #555;
+}
+.legend-item {
+display: flex;
+align-items: center;
+gap: 5px;
+}
+.legend-item strong { color: var(--danger-dark); }
+
+/* === TABEL EVALUASI === */
+.evaluasi-table {
+width: 100%;
+border-collapse: collapse;
+background: var(--white);
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+margin-bottom: 20px;
+}
+.evaluasi-table thead {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+}
+.evaluasi-table th, .evaluasi-table td {
+padding: 14px 12px;
+text-align: center;
+font-size: 0.88rem;
+border-bottom: 1px solid #eee;
+vertical-align: middle;
+}
+.evaluasi-table th {
+font-weight: 600;
+font-size: 0.82rem;
+text-transform: uppercase;
+letter-spacing: 0.3px;
+}
+.evaluasi-table th:nth-child(2),
+.evaluasi-table td:nth-child(2) {
+text-align: left;
+}
+.evaluasi-table tbody tr:hover {
+background: #fef5f4;
+}
+.evaluasi-table td.no-col {
+font-weight: 700;
+color: var(--danger-dark);
+width: 40px;
+}
+.evaluasi-table td.pernyataan-col {
+text-align: left;
+color: var(--dark);
+line-height: 1.5;
+font-size: 0.88rem;
+}
+.evaluasi-table td.kategori-col {
+font-size: 0.78rem;
+color: #888;
+font-style: italic;
+}
+
+/* === RADIO BUTTON CUSTOM === */
+.score-radio {
+display: flex;
+justify-content: center;
+gap: 6px;
+}
+.score-radio label {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 34px;
+height: 34px;
+border: 2px solid var(--border);
+border-radius: 50%;
+cursor: pointer;
+font-weight: 600;
+font-size: 0.85rem;
+color: #666;
+transition: all 0.25s;
+background: #fafafa;
+}
+.score-radio label:hover {
+border-color: var(--danger);
+color: var(--danger);
+transform: scale(1.08);
+}
+.score-radio input[type="radio"] {
+display: none;
+}
+.score-radio input[type="radio"]:checked + label {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+border-color: var(--danger-dark);
+box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* === ACTION PLAN === */
+.action-plan {
+background: linear-gradient(135deg, #ebf5fb, #d6eaf8);
+border-radius: 12px;
+padding: 25px;
+margin-top: 25px;
+border-left: 5px solid var(--secondary);
+}
+.action-plan h3 {
+color: var(--primary);
+font-size: 1.1rem;
+margin-bottom: 15px;
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.action-question {
+margin-bottom: 18px;
+}
+.action-question label {
+display: block;
+font-weight: 600;
+color: var(--dark);
+margin-bottom: 8px;
+font-size: 0.92rem;
+}
+.action-question textarea {
+width: 100%;
+padding: 12px 14px;
+border: 2px solid var(--border);
+border-radius: 8px;
+font-size: 0.9rem;
+font-family: inherit;
+resize: vertical;
+min-height: 90px;
+transition: border-color 0.3s;
+background: #fff;
+}
+.action-question textarea:focus {
+outline: none;
+border-color: var(--secondary);
+box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.15);
+}
+
+/* === PANDUAN PENILAIAN === */
+.panduan-box {
+background: var(--white);
+border-radius: 12px;
+padding: 25px;
+margin-top: 25px;
+box-shadow: 0 3px 15px rgba(0,0,0,0.05);
+border-top: 4px solid var(--accent);
+}
+.panduan-box h3 {
+color: var(--dark);
+font-size: 1.1rem;
+margin-bottom: 15px;
+}
+.panduan-box table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+.panduan-box th, .panduan-box td {
+padding: 10px 12px;
+text-align: left;
+font-size: 0.85rem;
+border-bottom: 1px solid #eee;
+}
+.panduan-box th {
+background: #f8f9fa;
+color: var(--dark);
+font-weight: 600;
+}
+.kategori-badge {
+display: inline-block;
+padding: 3px 10px;
+border-radius: 12px;
+font-size: 0.75rem;
+font-weight: 600;
+}
+.kategori-badge.sangat-baik { background: #d4edda; color: #155724; }
+.kategori-badge.baik { background: #d1ecf1; color: #0c5460; }
+.kategori-badge.cukup { background: #fff3cd; color: #856404; }
+.kategori-badge.kurang { background: #f8d7da; color: #721c24; }
+
+/* === BUTTONS === */
+.btn-group {
+display: flex;
+gap: 12px;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+.btn {
+padding: 12px 28px;
+border: none;
+border-radius: 25px;
+font-size: 0.92rem;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+transition: all 0.3s;
+font-family: inherit;
+}
+.btn-primary {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+}
+.btn-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+}
+.btn-primary:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+transform: none;
+}
+.btn-outline {
+background: #fff;
+color: var(--danger);
+border: 2px solid var(--danger);
+}
+.btn-outline:hover {
+background: var(--danger);
+color: #fff;
+}
+
+/* === STATUS MESSAGE === */
+.status-msg {
+padding: 15px 20px;
+border-radius: 10px;
+margin-top: 20px;
+font-size: 0.9rem;
+font-weight: 500;
+display: none;
+}
+.status-msg.success {
+background: #d4edda;
+color: #155724;
+border-left: 4px solid var(--success);
+display: block;
+}
+.status-msg.error {
+background: #f8d7da;
+color: #721c24;
+border-left: 4px solid var(--danger);
+display: block;
+}
+.status-msg.loading {
+background: #fff3cd;
+color: #856404;
+border-left: 4px solid var(--accent);
+display: block;
+}
+
+/* === FOOTER === */
+footer {
+background: var(--dark);
+color: #bbb;
+text-align: center;
+padding: 25px 20px;
+font-size: 0.85rem;
+margin-top: 40px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+.page-header h1 { font-size: 1.5rem; }
+.form-card { padding: 22px 18px; }
+.evaluasi-table th, .evaluasi-table td {
+padding: 10px 6px;
+font-size: 0.78rem;
+}
+.score-radio label {
+width: 28px;
+height: 28px;
+font-size: 0.78rem;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<a href="pengenalan-penerimaan-diri.html" target="_self">📖 Materi</a>
+<span class="separator">|</span>
+<a href="evaluasi-proses.html" target="_self">📋 Evaluasi Proses</a>
+<span class="separator">|</span>
+<a href="evaluasi-hasil.html" target="_self" style="color:#fff;">📊 Evaluasi Hasil</a>
+<span class="separator">|</span>
+<a href="materi-resources.html" target="_self">📎 Download</a>
+<span class="separator">|</span>
+<a href="../index.html" target="_self">🏠 BK SMPN 56</a>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+<div class="breadcrumb-materi">
+<a href="../index.html" target="_self">BK</a> ›
+<a href="pengenalan-penerimaan-diri.html" target="_self">Pengenalan & Penerimaan Diri</a> ›
+<span>Evaluasi Hasil</span>
+</div>
+<h1>📊 Instrumen Evaluasi Hasil Layanan</h1>
+<p class="subtitle">Refleksi Diri Setelah Mengikuti Bimbingan Klasikal</p>
+<span class="badge-info">Diisi oleh Siswa • Kelas VII / Semester Ganjil</span>
+</header>
+
+<main class="container">
+
+<form id="evaluasiHasilForm" autocomplete="off">
+
+<!-- IDENTITAS SISWA -->
+<section class="form-card">
+<h2><span class="sec-icon">👤</span> Identitas Siswa</h2>
+
+<div class="identitas-grid">
+<div class="identitas-item">
+<label>Nomor Induk Siswa (NIS) <span class="required">*</span></label>
+<input type="text" id="nis" name="nis" placeholder="Contoh: 2024001" required pattern="[0-9]{5,10}" title="NIS harus berupa angka 5-10 digit">
+</div>
+<div class="identitas-item">
+<label>Nama Lengkap <span class="required">*</span></label>
+<input type="text" id="namaSiswa" name="namaSiswa" placeholder="Nama lengkap sesuai rapor" required>
+</div>
+<div class="identitas-item">
+<label>Kelas <span class="required">*</span></label>
+<select id="kelas" name="kelas" required>
+<option value="">-- Pilih Kelas --</option>
+<option>7A</option><option>7B</option><option>7C</option><option>7D</option>
+<option>7E</option><option>7F</option><option>7G</option><option>7H</option>
+</select>
+</div>
+<div class="identitas-item">
+<label>Nomor Absen <span class="required">*</span></label>
+<input type="number" id="absen" name="absen" placeholder="Contoh: 15" min="1" max="40" required>
+</div>
+</div>
+
+<div class="petunjuk-box">
+<strong>📌 Petunjuk Pengisian:</strong> Berilah tanda centang (✓) pada kolom jawaban yang paling menggambarkan dirimu setelah mengikuti layanan ini.
+</div>
+
+<div class="legend-box">
+<div class="legend-item"><strong>1</strong> = Tidak Sesuai (TS)</div>
+<div class="legend-item"><strong>2</strong> = Cukup Sesuai (CS)</div>
+<div class="legend-item"><strong>3</strong> = Sesuai (S)</div>
+<div class="legend-item"><strong>4</strong> = Sangat Sesuai (SS)</div>
+</div>
+</section>
+
+<!-- TABEL REFLEKSI DIRI -->
+<section class="form-card">
+<h2><span class="sec-icon">1</span> Pernyataan Refleksi Diri</h2>
+
+<table class="evaluasi-table">
+<thead>
+<tr>
+<th>No</th>
+<th style="text-align:left;">Pernyataan Refleksi Diri</th>
+<th>1<br><small>TS</small></th>
+<th>2<br><small>CS</small></th>
+<th>3<br><small>S</small></th>
+<th>4<br><small>SS</small></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="no-col">1</td>
+<td class="pernyataan-col">
+<strong>Understanding (Pemahaman):</strong><br>
+Saya mampu menyebutkan minimal 3 kelebihan dan 3 kekurangan yang ada dalam diri saya.
+<div class="kategori-col">Aspek Kognitif</div>
+</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="p1s1" name="pernyataan1" value="1" required><label for="p1s1">1</label>
+<input type="radio" id="p1s2" name="pernyataan1" value="2"><label for="p1s2">2</label>
+<input type="radio" id="p1s3" name="pernyataan1" value="3"><label for="p1s3">3</label>
+<input type="radio" id="p1s4" name="pernyataan1" value="4"><label for="p1s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">2</td>
+<td class="pernyataan-col">
+<strong>Comfort (Kenyamanan):</strong><br>
+Saya merasa lebih nyaman dan bersyukur dengan kondisi fisik serta potensi yang saya miliki saat ini.
+<div class="kategori-col">Aspek Afektif</div>
+</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="p2s1" name="pernyataan2" value="1" required><label for="p2s1">1</label>
+<input type="radio" id="p2s2" name="pernyataan2" value="2"><label for="p2s2">2</label>
+<input type="radio" id="p2s3" name="pernyataan2" value="3"><label for="p2s3">3</label>
+<input type="radio" id="p2s4" name="pernyataan2" value="4"><label for="p2s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">3</td>
+<td class="pernyataan-col">
+<strong>Confidence (Percaya Diri):</strong><br>
+Saya merasa lebih percaya diri dan tidak lagi membandingkan diri secara negatif dengan orang lain.
+<div class="kategori-col">Aspek Afektif</div>
+</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="p3s1" name="pernyataan3" value="1" required><label for="p3s1">1</label>
+<input type="radio" id="p3s2" name="pernyataan3" value="2"><label for="p3s2">2</label>
+<input type="radio" id="p3s3" name="pernyataan3" value="3"><label for="p3s3">3</label>
+<input type="radio" id="p3s4" name="pernyataan3" value="4"><label for="p3s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">4</td>
+<td class="pernyataan-col">
+<strong>Positive Thinking:</strong><br>
+Saya menyadari bahwa kekurangan yang saya miliki dapat diperbaiki atau disikapi dengan tindakan positif.
+<div class="kategori-col">Aspek Behavioral</div>
+</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="p4s1" name="pernyataan4" value="1" required><label for="p4s1">1</label>
+<input type="radio" id="p4s2" name="pernyataan4" value="2"><label for="p4s2">2</label>
+<input type="radio" id="p4s3" name="pernyataan4" value="3"><label for="p4s3">3</label>
+<input type="radio" id="p4s4" name="pernyataan4" value="4"><label for="p4s4">4</label>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+
+<!-- RENCANA TINDAKAN -->
+<section class="form-card">
+<h2><span class="sec-icon">2</span> Rencana Tindakan (Action Plan)</h2>
+
+<div class="action-plan">
+<h3>🎯 Refleksi & Komitmen Diri</h3>
+
+<div class="action-question">
+<label>1. Apa hal paling penting atau berharga yang kamu temukan tentang dirimu hari ini?</label>
+<textarea id="actionPlan1" name="actionPlan1" placeholder="Tuliskan refleksi dirimu di sini..." required></textarea>
+</div>
+
+<div class="action-question">
+<label>2. Tuliskan 1 tindakan nyata yang akan kamu lakukan mulai minggu ini untuk mengembangkan kelebihan atau memperbaiki kekuranganmu!</label>
+<textarea id="actionPlan2" name="actionPlan2" placeholder="Contoh: Mulai minggu ini, saya akan..." required></textarea>
+</div>
+</div>
+
+<!-- STATUS -->
+<div class="status-msg" id="statusMsg"></div>
+
+<!-- BUTTONS -->
+<div class="btn-group">
+<button type="submit" class="btn btn-primary" id="submitBtn">
+💾 Kirim Evaluasi Hasil
+</button>
+<button type="reset" class="btn btn-outline">
+🔄 Reset Form
+</button>
+<a href="pengenalan-penerimaan-diri.html" target="_self" class="btn btn-outline">
+📖 Kembali ke Materi
+</a>
+</div>
+</section>
+
+<!-- PANDUAN PENILAIAN -->
+<section class="form-card">
+<h2><span class="sec-icon">📖</span> Panduan Penilaian & Interpretasi Skor</h2>
+<p style="color:#555; font-size:0.9rem; margin-bottom:15px;">
+<em>(Bagian ini untuk Guru BK — tidak perlu diisi siswa)</em>
+</p>
+
+<div class="panduan-box">
+<h3>📊 Rumus Skor Akhir</h3>
+<p style="background:#f8f9fa; padding:12px; border-radius:8px; font-family:monospace; text-align:center; font-size:0.95rem; margin:10px 0;">
+Skor Akhir = (Total Skor Perolehan / Skor Maksimal) × 100
+</p>
+<p style="font-size:0.85rem; color:#666; margin-top:10px;">
+<strong>Skor Maksimal</strong> = 4 pernyataan × 4 skor tertinggi = <strong>16</strong>
+</p>
+
+<h3 style="margin-top:20px;">📈 Klasifikasi Hasil</h3>
+<table>
+<thead>
+<tr>
+<th>Rentang Skor</th>
+<th>Klasifikasi</th>
+<th>Tindak Lanjut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>81 - 100</strong></td>
+<td><span class="kategori-badge sangat-baik">Sangat Baik</span></td>
+<td>Siswa memiliki pemahaman dan penerimaan diri yang sangat positif.</td>
+</tr>
+<tr>
+<td><strong>61 - 80</strong></td>
+<td><span class="kategori-badge baik">Baik</span></td>
+<td>Siswa sudah memahami diri dengan baik, namun butuh penguatan berkala.</td>
+</tr>
+<tr>
+<td><strong>41 - 60</strong></td>
+<td><span class="kategori-badge cukup">Cukup</span></td>
+<td>Siswa masih ragu dengan potensinya, butuh bimbingan kelompok lanjutan.</td>
+</tr>
+<tr>
+<td><strong>&lt; 40</strong></td>
+<td><span class="kategori-badge kurang">Kurang</span></td>
+<td>Siswa terindikasi krisis percaya diri, rekomendasikan untuk Konseling Individu.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
+</form>
+
+</main>
+
+<footer>
+<p>&copy; 2026 <strong>Unit BK SMP Negeri 56 Jakarta</strong> — Evaluasi Hasil Layanan</p>
+<p style="margin-top:5px;">Materi: <a href="pengenalan-penerimaan-diri.html" target="_self">Pengenalan & Penerimaan Diri</a></p>
+</footer>
+
+<script>
+// ============================================
+// KONFIGURASI GOOGLE APPS SCRIPT WEB APP URL
+// Ganti URL di bawah dengan URL deployment Anda
+// ============================================
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/exec';
+
+const form = document.getElementById('evaluasiHasilForm');
+const statusMsg = document.getElementById('statusMsg');
+const submitBtn = document.getElementById('submitBtn');
+
+function showStatus(type, message) {
+statusMsg.className = 'status-msg ' + type;
+statusMsg.textContent = message;
+statusMsg.style.display = 'block';
+window.scrollTo({ top: statusMsg.offsetTop - 100, behavior: 'smooth' });
+}
+
+form.addEventListener('submit', async function(e) {
+e.preventDefault();
+
+const formData = new FormData(form);
+const data = Object.fromEntries(formData.entries());
+
+// Validasi NIS (angka 5-10 digit)
+if (!/^\d{5,10}$/.test(data.nis)) {
+showStatus('error', '⚠️ NIS harus berupa angka 5-10 digit!');
+return;
+}
+
+// Validasi semua pernyataan terisi
+for (let i = 1; i <= 4; i++) {
+if (!data['pernyataan' + i]) {
+showStatus('error', '⚠️ Mohon lengkapi semua pernyataan refleksi diri (1-4)!');
+return;
+}
+}
+
+// Hitung skor otomatis
+const totalSkor = parseInt(data.pernyataan1) + parseInt(data.pernyataan2) +
+parseInt(data.pernyataan3) + parseInt(data.pernyataan4);
+const skorAkhir = Math.round((totalSkor / 16) * 100);
+
+let kategori = '';
+if (skorAkhir >= 81) kategori = 'Sangat Baik';
+else if (skorAkhir >= 61) kategori = 'Baik';
+else if (skorAkhir >= 41) kategori = 'Cukup';
+else kategori = 'Kurang';
+
+// Tambahkan metadata
+data.jenisEvaluasi = 'HASIL';
+data.topik = 'Pengenalan dan Penerimaan Diri';
+data.totalSkor = totalSkor;
+data.skorMaksimal = 16;
+data.skorAkhir = skorAkhir;
+data.kategori = kategori;
+data.timestamp = new Date().toISOString();
+
+submitBtn.disabled = true;
+submitBtn.innerHTML = '⏳ Mengirim...';
+showStatus('loading', '📤 Sedang mengirim data ke Google Spreadsheet...');
+
+try {
+const response = await fetch(GOOGLE_SCRIPT_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(data)
+});
+
+setTimeout(() => {
+showStatus('success',
+`✅ Evaluasi berhasil dikirim!\n\n` +
+`📊 Total Skor: ${totalSkor}/16\n` +
+`📈 Skor Akhir: ${skorAkhir}\n` +
+`🏆 Kategori: ${kategori}\n\n` +
+`Data terekap otomatis di Google Spreadsheet.`
+);
+submitBtn.innerHTML = '✅ Terkirim';
+form.reset();
+setTimeout(() => {
+submitBtn.disabled = false;
+submitBtn.innerHTML = '💾 Kirim Evaluasi Hasil';
+}, 5000);
+}, 1500);
+
+} catch (error) {
+showStatus('error', '❌ Gagal mengirim: ' + error.message);
+submitBtn.disabled = false;
+submitBtn.innerHTML = '💾 Kirim Evaluasi Hasil';
+}
+});
+</script>
+</body>
+</html>

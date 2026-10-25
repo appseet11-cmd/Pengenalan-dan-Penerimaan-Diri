@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e74c3c">
+<title>Evaluasi Proses Layanan | Pengenalan & Penerimaan Diri — BK SMPN 56</title>
+<meta name="description" content="Instrumen Evaluasi Proses Layanan Bimbingan Klasikal topik Pengenalan dan Penerimaan Diri untuk Guru BK SMP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--primary: #1a5276;
+--secondary: #2980b9;
+--accent: #f39c12;
+--light: #ecf0f1;
+--dark: #2c3e50;
+--success: #27ae60;
+--danger: #e74c3c;
+--danger-dark: #c0392b;
+--white: #ffffff;
+--border: #e0e0e0;
+}
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+line-height: 1.7;
+color: #333;
+background-color: #f5f6fa;
+-webkit-font-smoothing: antialiased;
+}
+
+/* === TOP BAR === */
+.top-bar {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+padding: 10px 20px;
+font-size: 0.82rem;
+text-align: center;
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 8px 15px;
+}
+.top-bar a {
+color: #ffd700;
+text-decoration: none;
+font-weight: 600;
+transition: opacity 0.3s;
+}
+.top-bar a:hover { text-decoration: underline; opacity: 0.9; }
+.top-bar .separator { opacity: 0.5; }
+
+/* === HEADER === */
+.page-header {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: var(--white);
+padding: 45px 20px 40px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.page-header::before {
+content: '📋';
+position: absolute;
+font-size: 14rem;
+opacity: 0.08;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.breadcrumb-materi {
+display: inline-flex;
+gap: 8px;
+align-items: center;
+background: rgba(255,255,255,0.15);
+padding: 6px 16px;
+border-radius: 20px;
+font-size: 0.82rem;
+margin-bottom: 18px;
+backdrop-filter: blur(10px);
+position: relative;
+}
+.breadcrumb-materi a { color: #fff; text-decoration: none; }
+.breadcrumb-materi a:hover { text-decoration: underline; }
+.page-header h1 {
+font-size: 2rem;
+font-weight: 800;
+margin-bottom: 10px;
+position: relative;
+}
+.page-header .subtitle {
+font-size: 0.98rem;
+opacity: 0.95;
+max-width: 700px;
+margin: 0 auto;
+position: relative;
+}
+.badge-info {
+display: inline-block;
+background: rgba(255,255,255,0.2);
+padding: 5px 14px;
+border-radius: 15px;
+font-size: 0.78rem;
+font-weight: 600;
+margin-top: 15px;
+position: relative;
+}
+
+/* === CONTAINER === */
+.container {
+max-width: 950px;
+margin: 0 auto;
+padding: 30px 20px;
+}
+
+/* === FORM CARD === */
+.form-card {
+background: var(--white);
+border-radius: 15px;
+padding: 35px;
+margin-bottom: 25px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+border-left: 5px solid var(--danger);
+}
+.form-card h2 {
+color: var(--danger-dark);
+font-size: 1.35rem;
+margin-bottom: 20px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-weight: 700;
+}
+.form-card h2 .sec-icon {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+width: 40px;
+height: 40px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+
+/* === META INFO === */
+.meta-info {
+background: linear-gradient(135deg, #fdecea, #fbd5cf);
+border-radius: 10px;
+padding: 18px 22px;
+margin-bottom: 25px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 15px;
+}
+.meta-item label {
+display: block;
+font-size: 0.78rem;
+color: var(--danger-dark);
+font-weight: 600;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+margin-bottom: 4px;
+}
+.meta-item .value {
+font-size: 0.95rem;
+color: var(--dark);
+font-weight: 600;
+}
+.meta-item input, .meta-item select {
+width: 100%;
+padding: 8px 12px;
+border: 2px solid var(--border);
+border-radius: 6px;
+font-size: 0.9rem;
+font-family: inherit;
+background: #fff;
+}
+.meta-item input:focus, .meta-item select:focus {
+outline: none;
+border-color: var(--danger);
+}
+
+/* === PETUNJUK === */
+.petunjuk-box {
+background: linear-gradient(135deg, #fff3cd, #ffe69c);
+border-left: 4px solid var(--accent);
+padding: 15px 20px;
+border-radius: 8px;
+margin-bottom: 25px;
+font-size: 0.88rem;
+color: #6d4c00;
+}
+.petunjuk-box strong { color: #856404; }
+
+/* === TABEL EVALUASI === */
+.evaluasi-table {
+width: 100%;
+border-collapse: collapse;
+background: var(--white);
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+margin-bottom: 20px;
+}
+.evaluasi-table thead {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+}
+.evaluasi-table th, .evaluasi-table td {
+padding: 14px 12px;
+text-align: center;
+font-size: 0.88rem;
+border-bottom: 1px solid #eee;
+vertical-align: middle;
+}
+.evaluasi-table th {
+font-weight: 600;
+font-size: 0.82rem;
+text-transform: uppercase;
+letter-spacing: 0.3px;
+}
+.evaluasi-table th:nth-child(2),
+.evaluasi-table td:nth-child(2) {
+text-align: left;
+}
+.evaluasi-table tbody tr:hover {
+background: #fef5f4;
+}
+.evaluasi-table td.no-col {
+font-weight: 700;
+color: var(--danger-dark);
+width: 40px;
+}
+.evaluasi-table td.aspek-col {
+text-align: left;
+color: var(--dark);
+line-height: 1.5;
+font-size: 0.88rem;
+}
+
+/* === RADIO BUTTON CUSTOM === */
+.score-radio {
+display: flex;
+justify-content: center;
+gap: 6px;
+}
+.score-radio label {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 34px;
+height: 34px;
+border: 2px solid var(--border);
+border-radius: 50%;
+cursor: pointer;
+font-weight: 600;
+font-size: 0.85rem;
+color: #666;
+transition: all 0.25s;
+background: #fafafa;
+}
+.score-radio label:hover {
+border-color: var(--danger);
+color: var(--danger);
+transform: scale(1.08);
+}
+.score-radio input[type="radio"] {
+display: none;
+}
+.score-radio input[type="radio"]:checked + label,
+.score-radio label:has(input:checked) {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+border-color: var(--danger-dark);
+box-shadow: 0 3px 8px rgba(231, 76, 60, 0.3);
+}
+/* Fallback untuk browser yang tidak support :has */
+.score-radio input[type="radio"]:checked + label {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+border-color: var(--danger-dark);
+}
+
+/* === TEXTAREA CATATAN === */
+.catatan-input {
+width: 100%;
+padding: 10px 12px;
+border: 2px solid var(--border);
+border-radius: 8px;
+font-size: 0.88rem;
+font-family: inherit;
+resize: vertical;
+min-height: 70px;
+transition: border-color 0.3s;
+}
+.catatan-input:focus {
+outline: none;
+border-color: var(--danger);
+box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+/* === TTD SECTION === */
+.ttd-section {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+margin-top: 30px;
+padding-top: 25px;
+border-top: 2px dashed var(--border);
+}
+.ttd-box {
+text-align: center;
+}
+.ttd-box label {
+display: block;
+font-size: 0.85rem;
+color: var(--dark);
+font-weight: 600;
+margin-bottom: 8px;
+}
+.ttd-box input {
+width: 100%;
+padding: 10px;
+border: 2px solid var(--border);
+border-radius: 8px;
+text-align: center;
+font-family: inherit;
+font-size: 0.9rem;
+}
+.ttd-box input:focus {
+outline: none;
+border-color: var(--danger);
+}
+.ttd-box .nip-label {
+font-size: 0.78rem;
+color: #888;
+margin-top: 5px;
+}
+
+/* === BUTTONS === */
+.btn-group {
+display: flex;
+gap: 12px;
+justify-content: center;
+flex-wrap: wrap;
+margin-top: 30px;
+}
+.btn {
+padding: 12px 28px;
+border: none;
+border-radius: 25px;
+font-size: 0.92rem;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 8px;
+transition: all 0.3s;
+font-family: inherit;
+}
+.btn-primary {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+}
+.btn-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(231, 76, 60, 0.3);
+}
+.btn-primary:disabled {
+opacity: 0.6;
+cursor: not-allowed;
+transform: none;
+}
+.btn-outline {
+background: #fff;
+color: var(--danger);
+border: 2px solid var(--danger);
+}
+.btn-outline:hover {
+background: var(--danger);
+color: #fff;
+}
+
+/* === STATUS MESSAGE === */
+.status-msg {
+padding: 15px 20px;
+border-radius: 10px;
+margin-top: 20px;
+font-size: 0.9rem;
+font-weight: 500;
+display: none;
+}
+.status-msg.success {
+background: #d4edda;
+color: #155724;
+border-left: 4px solid var(--success);
+display: block;
+}
+.status-msg.error {
+background: #f8d7da;
+color: #721c24;
+border-left: 4px solid var(--danger);
+display: block;
+}
+.status-msg.loading {
+background: #fff3cd;
+color: #856404;
+border-left: 4px solid var(--accent);
+display: block;
+}
+
+/* === FOOTER === */
+footer {
+background: var(--dark);
+color: #bbb;
+text-align: center;
+padding: 25px 20px;
+font-size: 0.85rem;
+margin-top: 40px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+.page-header h1 { font-size: 1.5rem; }
+.form-card { padding: 22px 18px; }
+.evaluasi-table th, .evaluasi-table td {
+padding: 10px 6px;
+font-size: 0.78rem;
+}
+.score-radio label {
+width: 28px;
+height: 28px;
+font-size: 0.78rem;
+}
+.ttd-section { grid-template-columns: 1fr; gap: 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+<a href="pengenalan-penerimaan-diri.html" target="_self">📖 Materi</a>
+<span class="separator">|</span>
+<a href="evaluasi-proses.html" target="_self" style="color:#fff;">📋 Evaluasi Proses</a>
+<span class="separator">|</span>
+<a href="evaluasi-hasil.html" target="_self">📊 Evaluasi Hasil</a>
+<span class="separator">|</span>
+<a href="materi-resources.html" target="_self">📎 Download</a>
+<span class="separator">|</span>
+<a href="../index.html" target="_self">🏠 BK SMPN 56</a>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+<div class="breadcrumb-materi">
+<a href="../index.html" target="_self">BK</a> ›
+<a href="pengenalan-penerimaan-diri.html" target="_self">Pengenalan & Penerimaan Diri</a> ›
+<span>Evaluasi Proses</span>
+</div>
+<h1>📋 Instrumen Evaluasi Proses Layanan</h1>
+<p class="subtitle">Bimbingan Klasikal — Topik Pengenalan dan Penerimaan Diri</p>
+<span class="badge-info">Diisi oleh Guru BK • Kelas VII / Semester Ganjil</span>
+</header>
+
+<main class="container">
+
+<form id="evaluasiProsesForm" autocomplete="off">
+
+<!-- META INFO -->
+<section class="form-card">
+<h2><span class="sec-icon">ℹ</span> Informasi Layanan</h2>
+
+<div class="meta-info">
+<div class="meta-item">
+<label>Topik Layanan</label>
+<div class="value">Pengenalan dan Penerimaan Diri</div>
+</div>
+<div class="meta-item">
+<label>Satuan Pendidikan</label>
+<div class="value">SMP Negeri 56 Jakarta</div>
+</div>
+<div class="meta-item">
+<label>Kelas / Semester</label>
+<div class="value">VII / Ganjil</div>
+</div>
+<div class="meta-item">
+<label>Hari / Tanggal</label>
+<input type="date" id="tanggal" name="tanggal" required>
+</div>
+<div class="meta-item">
+<label>Kelas yang Dievaluasi</label>
+<select id="kelasEvaluasi" name="kelasEvaluasi" required>
+<option value="">-- Pilih Kelas --</option>
+<option>7A</option><option>7B</option><option>7C</option><option>7D</option>
+<option>7E</option><option>7F</option><option>7G</option><option>7H</option>
+</select>
+</div>
+<div class="meta-item">
+<label>Nama Guru BK</label>
+<input type="text" id="namaGuru" name="namaGuru" placeholder="Nama lengkap guru BK" required>
+</div>
+</div>
+
+<div class="petunjuk-box">
+<strong>📌 Petunjuk Pengisian:</strong> Mohon berikan tanda centang (✓) pada kolom skor (1, 2, 3, atau 4) yang paling sesuai dengan kondisi objektif saat proses layanan berlangsung. <strong>1 = Kurang, 2 = Cukup, 3 = Baik, 4 = Sangat Baik.</strong>
+</div>
+</section>
+
+<!-- TABEL EVALUASI PROSES -->
+<section class="form-card">
+<h2><span class="sec-icon">1</span> Aspek yang Dievaluasi</h2>
+
+<table class="evaluasi-table">
+<thead>
+<tr>
+<th>No</th>
+<th style="text-align:left;">Aspek yang Dievaluasi</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="no-col">1</td>
+<td class="aspek-col"><strong>Keterlibatan Siswa:</strong> Peserta didik terlibat aktif dalam memberikan respons, bertanya, dan menjawab selama proses layanan.</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="a1s1" name="aspek1" value="1" required><label for="a1s1">1</label>
+<input type="radio" id="a1s2" name="aspek1" value="2"><label for="a1s2">2</label>
+<input type="radio" id="a1s3" name="aspek1" value="3"><label for="a1s3">3</label>
+<input type="radio" id="a1s4" name="aspek1" value="4"><label for="a1s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">2</td>
+<td class="aspek-col"><strong>Antusiasme & Fokus:</strong> Peserta didik menunjukkan perhatian penuh, konsentrasi, dan ketertarikan tinggi terhadap materi.</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="a2s1" name="aspek2" value="1" required><label for="a2s1">1</label>
+<input type="radio" id="a2s2" name="aspek2" value="2"><label for="a2s2">2</label>
+<input type="radio" id="a2s3" name="aspek2" value="3"><label for="a2s3">3</label>
+<input type="radio" id="a2s4" name="aspek2" value="4"><label for="a2s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">3</td>
+<td class="aspek-col"><strong>Kenyamanan Atmosfer:</strong> Tercipta hubungan baik antarsiswa sehingga mereka merasa aman dan terbuka menyampaikan pendapat tanpa takut dihakimi.</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="a3s1" name="aspek3" value="1" required><label for="a3s1">1</label>
+<input type="radio" id="a3s2" name="aspek3" value="2"><label for="a3s2">2</label>
+<input type="radio" id="a3s3" name="aspek3" value="3"><label for="a3s3">3</label>
+<input type="radio" id="a3s4" name="aspek3" value="4"><label for="a3s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">4</td>
+<td class="aspek-col"><strong>Ketepatan Waktu:</strong> Alokasi waktu pelaksanaan layanan berjalan sesuai dengan rencana yang telah ditetapkan dalam RPL.</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="a4s1" name="aspek4" value="1" required><label for="a4s1">1</label>
+<input type="radio" id="a4s2" name="aspek4" value="2"><label for="a4s2">2</label>
+<input type="radio" id="a4s3" name="aspek4" value="3"><label for="a4s3">3</label>
+<input type="radio" id="a4s4" name="aspek4" value="4"><label for="a4s4">4</label>
+</div>
+</td>
+</tr>
+<tr>
+<td class="no-col">5</td>
+<td class="aspek-col"><strong>Kesesuaian Media & Metode:</strong> Media pembelajaran (lembar analisis SWOT diri/video/kartu) membantu mempermudah siswa memahami materi.</td>
+<td>
+<div class="score-radio">
+<input type="radio" id="a5s1" name="aspek5" value="1" required><label for="a5s1">1</label>
+<input type="radio" id="a5s2" name="aspek5" value="2"><label for="a5s2">2</label>
+<input type="radio" id="a5s3" name="aspek5" value="3"><label for="a5s3">3</label>
+<input type="radio" id="a5s4" name="aspek5" value="4"><label for="a5s4">4</label>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- CATATAN / ANALISIS -->
+<div style="margin-top: 20px;">
+<label style="display:block; font-weight:600; color:var(--dark); margin-bottom:8px; font-size:0.9rem;">
+📝 Catatan / Analisis Guru BK
+</label>
+<textarea class="catatan-input" id="catatan" name="catatan" placeholder="Tuliskan catatan, temuan, atau analisis tambahan terkait proses layanan..." required></textarea>
+</div>
+
+<!-- TTD -->
+<div class="ttd-section">
+<div class="ttd-box">
+<label>Nama Kepala Sekolah</label>
+<input type="text" id="namaKepsek" name="namaKepsek" placeholder="Nama Kepala Sekolah" required>
+<div class="nip-label">NIP.</div>
+<input type="text" id="nipKepsek" name="nipKepsek" placeholder="NIP Kepala Sekolah" style="margin-top:5px;">
+</div>
+<div class="ttd-box">
+<label>Nama Guru BK</label>
+<input type="text" id="namaGuruTTD" name="namaGuruTTD" placeholder="Nama Guru BK" required>
+<div class="nip-label">NIP.</div>
+<input type="text" id="nipGuru" name="nipGuru" placeholder="NIP Guru BK" style="margin-top:5px;">
+</div>
+</div>
+
+<!-- STATUS -->
+<div class="status-msg" id="statusMsg"></div>
+
+<!-- BUTTONS -->
+<div class="btn-group">
+<button type="submit" class="btn btn-primary" id="submitBtn">
+💾 Kirim Evaluasi Proses
+</button>
+<button type="reset" class="btn btn-outline">
+🔄 Reset Form
+</button>
+<a href="evaluasi-hasil.html" target="_self" class="btn btn-outline">
+📊 Lanjut ke Evaluasi Hasil →
+</a>
+</div>
+</section>
+
+</form>
+
+</main>
+
+<footer>
+<p>&copy; 2026 <strong>Unit BK SMP Negeri 56 Jakarta</strong> — Evaluasi Proses Layanan</p>
+<p style="margin-top:5px;">Materi: <a href="pengenalan-penerimaan-diri.html" target="_self">Pengenalan & Penerimaan Diri</a></p>
+</footer>
+
+<script>
+// ============================================
+// KONFIGURASI GOOGLE APPS SCRIPT WEB APP URL
+// Ganti URL di bawah dengan URL deployment Anda
+// ============================================
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/exec';
+
+const form = document.getElementById('evaluasiProsesForm');
+const statusMsg = document.getElementById('statusMsg');
+const submitBtn = document.getElementById('submitBtn');
+
+function showStatus(type, message) {
+statusMsg.className = 'status-msg ' + type;
+statusMsg.textContent = message;
+statusMsg.style.display = 'block';
+window.scrollTo({ top: statusMsg.offsetTop - 100, behavior: 'smooth' });
+}
+
+form.addEventListener('submit', async function(e) {
+e.preventDefault();
+
+// Validasi
+const formData = new FormData(form);
+const data = Object.fromEntries(formData.entries());
+
+// Cek semua aspek terisi
+for (let i = 1; i <= 5; i++) {
+if (!data['aspek' + i]) {
+showStatus('error', '⚠️ Mohon lengkapi semua penilaian aspek (1-5)!');
+return;
+}
+}
+
+// Tambahkan metadata
+data.jenisEvaluasi = 'PROSES';
+data.topik = 'Pengenalan dan Penerimaan Diri';
+data.satuanPendidikan = 'SMP Negeri 56 Jakarta';
+data.timestamp = new Date().toISOString();
+
+submitBtn.disabled = true;
+submitBtn.innerHTML = '⏳ Mengirim...';
+showStatus('loading', '📤 Sedang mengirim data ke Google Spreadsheet...');
+
+try {
+const response = await fetch(GOOGLE_SCRIPT_URL, {
+method: 'POST',
+mode: 'no-cors',
+headers: { 'Content-Type': 'application/json' },
+body: JSON.stringify(data)
+});
+
+// Karena mode no-cors, kita tidak bisa baca response
+// Tapi data akan terkirim jika URL benar
+setTimeout(() => {
+showStatus('success', '✅ Evaluasi Proses berhasil dikirim dan terekap di Google Spreadsheet!');
+submitBtn.innerHTML = '✅ Terkirim';
+form.reset();
+setTimeout(() => {
+submitBtn.disabled = false;
+submitBtn.innerHTML = '💾 Kirim Evaluasi Proses';
+}, 3000);
+}, 1500);
+
+} catch (error) {
+showStatus('error', '❌ Gagal mengirim: ' + error.message);
+submitBtn.disabled = false;
+submitBtn.innerHTML = '💾 Kirim Evaluasi Proses';
+}
+});
+</script>
+</body>
+</html>
