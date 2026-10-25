@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e74c3c">
+<title>Materi Pendukung | Pengenalan & Penerimaan Diri — BK SMPN 56</title>
+<meta name="description" content="Koleksi file PPT, PDF, DOC, dan video pendukung materi Pengenalan & Penerimaan Diri untuk siswa SMP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--primary: #1a5276;
+--secondary: #2980b9;
+--accent: #f39c12;
+--light: #ecf0f1;
+--dark: #2c3e50;
+--success: #27ae60;
+--danger: #e74c3c;
+--danger-dark: #c0392b;
+--white: #ffffff;
+--border: #e0e0e0;
+}
+html { scroll-behavior: smooth; }
+body {
+font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+line-height: 1.7;
+color: #333;
+background-color: #f5f6fa;
+-webkit-font-smoothing: antialiased;
+}
+
+/* === TOP BAR === */
+.top-bar {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: #fff;
+padding: 10px 20px;
+font-size: 0.82rem;
+text-align: center;
+}
+.top-bar a { color: #ffd700; text-decoration: none; font-weight: 600; }
+.top-bar a:hover { text-decoration: underline; }
+
+/* === HEADER === */
+.page-header {
+background: linear-gradient(135deg, var(--danger), var(--danger-dark));
+color: var(--white);
+padding: 45px 20px;
+text-align: center;
+}
+.page-header h1 {
+font-size: 2rem;
+font-weight: 800;
+margin-bottom: 10px;
+}
+.page-header p {
+font-size: 1rem;
+opacity: 0.95;
+max-width: 650px;
+margin: 0 auto;
+}
+
+/* === CONTAINER === */
+.container {
+max-width: 1000px;
+margin: 0 auto;
+padding: 30px 20px;
+}
+
+/* === FORM TAMBAH LINK === */
+.form-card {
+background: var(--white);
+border-radius: 15px;
+padding: 28px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+margin-bottom: 30px;
+border-top: 5px solid var(--danger);
+}
+.form-card h2 {
+color: var(--danger-dark);
+font-size: 1.3rem;
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+gap: 10px;
+}
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
+margin-bottom: 15px;
+}
+.form-group {
+display: flex;
+flex-direction: column;
+}
+.form-group label {
+font-weight: 600;
+color: var(--dark);
+margin-bottom: 6px;
+font-size: 0.88rem;
+}
+.form-group input,
+.form-group select {
+padding: 10px 14px;
+border: 2px solid var(--border);
+border-radius: 8px;
+font-size: 0.9rem;
+font-family: inherit;
+transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus {
+outline: none;
+border-color: var(--danger);
+box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.15);
+}
+.btn {
+padding: 11px 24px;
+border: none;
+border-radius: 25px;
+font-size: 0.9rem;
+font-weight: 600;
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+transition: all 0.3s;
+font-family: inherit;
+}
+.btn-primary { background: var(--danger); color: var(--white); }
+.btn-primary:hover { background: var(--danger-dark); transform: translateY(-2px); }
+.btn-secondary { background: var(--border); color: var(--dark); }
+.btn-secondary:hover { background: #ccc; }
+.btn-danger { background: #fff; color: var(--danger); border: 1.5px solid var(--danger); padding: 6px 14px; font-size: 0.8rem; border-radius: 20px; }
+.btn-danger:hover { background: var(--danger); color: #fff; }
+.btn-clear { background: transparent; color: var(--danger); border: 1.5px dashed var(--danger); }
+.btn-clear:hover { background: var(--danger); color: #fff; }
+
+/* === FILTER TABS === */
+.filter-tabs {
+display: flex;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 20px;
+}
+.filter-tab {
+padding: 8px 18px;
+background: var(--white);
+border: 2px solid var(--border);
+border-radius: 20px;
+cursor: pointer;
+font-size: 0.85rem;
+font-weight: 500;
+transition: all 0.3s;
+font-family: inherit;
+color: var(--dark);
+}
+.filter-tab:hover { border-color: var(--danger); color: var(--danger); }
+.filter-tab.active {
+background: var(--danger);
+color: #fff;
+border-color: var(--danger);
+}
+
+/* === FILE LIST === */
+.files-section {
+background: var(--white);
+border-radius: 15px;
+padding: 28px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+}
+.files-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+flex-wrap: wrap;
+gap: 10px;
+}
+.files-header h2 {
+color: var(--dark);
+font-size: 1.3rem;
+}
+.file-count {
+background: var(--danger);
+color: #fff;
+padding: 3px 12px;
+border-radius: 15px;
+font-size: 0.8rem;
+font-weight: 600;
+margin-left: 8px;
+}
+.file-list {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 15px;
+}
+.file-item {
+background: #f8f9fa;
+border: 2px solid var(--border);
+border-radius: 12px;
+padding: 18px;
+transition: all 0.3s;
+display: flex;
+flex-direction: column;
+gap: 10px;
+position: relative;
+}
+.file-item:hover {
+border-color: var(--danger);
+transform: translateY(-3px);
+box-shadow: 0 8px 20px rgba(231, 76, 60, 0.12);
+}
+.file-top {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+.file-icon {
+width: 45px;
+height: 45px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.3rem;
+color: #fff;
+flex-shrink: 0;
+font-weight: 700;
+}
+.file-icon.ppt { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+.file-icon.pdf { background: linear-gradient(135deg, #e74c3c, #922b21); }
+.file-icon.doc { background: linear-gradient(135deg, #2980b9, #1a5276); }
+.file-icon.video { background: linear-gradient(135deg, #8e44ad, #6c3483); }
+.file-info { flex: 1; min-width: 0; }
+.file-title {
+font-weight: 600;
+color: var(--dark);
+font-size: 0.95rem;
+margin-bottom: 3px;
+word-break: break-word;
+}
+.file-category {
+font-size: 0.75rem;
+color: #888;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 0.5px;
+}
+.file-link {
+display: inline-block;
+color: var(--secondary);
+text-decoration: none;
+font-size: 0.85rem;
+font-weight: 500;
+word-break: break-all;
+padding: 6px 10px;
+background: #eaf4fb;
+border-radius: 6px;
+transition: background 0.3s;
+}
+.file-link:hover { background: #d6eaf8; }
+.file-actions {
+display: flex;
+gap: 8px;
+justify-content: flex-end;
+margin-top: 5px;
+}
+
+/* === EMPTY STATE === */
+.empty-state {
+text-align: center;
+padding: 50px 20px;
+color: #888;
+}
+.empty-state .empty-icon {
+font-size: 4rem;
+margin-bottom: 15px;
+opacity: 0.4;
+}
+.empty-state h3 {
+color: var(--dark);
+margin-bottom: 8px;
+font-size: 1.1rem;
+}
+.empty-state p {
+font-size: 0.9rem;
+}
+
+/* === INFO BOX === */
+.info-box {
+background: linear-gradient(135deg, #fdecea, #fbd5cf);
+border-left: 4px solid var(--danger);
+padding: 15px 20px;
+border-radius: 8px;
+margin: 20px 0;
+font-size: 0.88rem;
+color: #555;
+}
+.info-box strong { color: var(--danger-dark); }
+
+/* === FOOTER === */
+footer {
+background: var(--dark);
+color: #bbb;
+text-align: center;
+padding: 25px 20px;
+font-size: 0.85rem;
+margin-top: 40px;
+}
+footer a { color: var(--accent); text-decoration: none; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+.page-header h1 { font-size: 1.5rem; }
+.form-row { grid-template-columns: 1fr; }
+.form-card, .files-section { padding: 20px; }
+}
+
+/* === ANIMASI MASUK === */
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.file-item { animation: fadeIn 0.4s ease; }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+📎 Materi Pendukung | <a href="pengenalan-penerimaan-diri.html" target="_self">← Kembali ke Materi</a> | <a href="../index.html" target="_self">🏠 BK SMPN 56</a>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+<h1>📂 Materi Pendukung</h1>
+<p>Koleksi file PPT, PDF, DOC, dan video untuk materi <strong>Pengenalan & Penerimaan Diri</strong></p>
+</header>
+
+<main class="container">
+
+<!-- FORM TAMBAH FILE -->
+<section class="form-card">
+<h2>➕ Tambahkan File Baru</h2>
+<form id="addFileForm">
+<div class="form-row">
+<div class="form-group">
+<label for="fileTitle">Judul File *</label>
+<input type="text" id="fileTitle" placeholder="Contoh: Materi Pengenalan Diri" required>
+</div>
+<div class="form-group">
+<label for="fileCategory">Jenis File *</label>
+<select id="fileCategory" required>
+<option value="">-- Pilih Jenis --</option>
+<option value="ppt">📊 Presentasi (PPT)</option>
+<option value="pdf">📄 Dokumen (PDF)</option>
+<option value="doc">📝 Dokumen (DOC/DOCX)</option>
+<option value="video">🎥 Video</option>
+</select>
+</div>
+</div>
+<div class="form-group" style="margin-bottom: 15px;">
+<label for="fileUrl">Link/URL File *</label>
+<input type="url" id="fileUrl" placeholder="https://contoh.com/file.pdf" required>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+<button type="submit" class="btn btn-primary">💾 Simpan File</button>
+<button type="reset" class="btn btn-secondary">🔄 Reset Form</button>
+</div>
+</form>
+
+<div class="info-box">
+<strong>💡 Catatan:</strong> File yang ditambahkan akan <strong>tersimpan permanen</strong> di browser ini (tidak hilang saat halaman di-refresh). File hanya akan hilang jika Anda menekan tombol <strong>"Hapus"</strong> pada masing-masing item atau tombol <strong>"Hapus Semua"</strong>.
+</div>
+</section>
+
+<!-- DAFTAR FILE -->
+<section class="files-section">
+<div class="files-header">
+<h2>📚 Daftar File Tersimpan <span class="file-count" id="fileCount">0</span></h2>
+<button class="btn btn-clear" id="clearAllBtn" style="display:none;">🗑️ Hapus Semua</button>
+</div>
+
+<!-- FILTER -->
+<div class="filter-tabs">
+<button class="filter-tab active" data-filter="all">Semua</button>
+<button class="filter-tab" data-filter="ppt">📊 PPT</button>
+<button class="filter-tab" data-filter="pdf">📄 PDF</button>
+<button class="filter-tab" data-filter="doc">📝 DOC</button>
+<button class="filter-tab" data-filter="video">🎥 Video</button>
+</div>
+
+<!-- LIST -->
+<div class="file-list" id="fileList">
+<!-- File akan dirender di sini oleh JavaScript -->
+</div>
+
+<div class="empty-state" id="emptyState" style="display:none;">
+<div class="empty-icon">📭</div>
+<h3>Belum Ada File</h3>
+<p>Gunakan form di atas untuk menambahkan file PPT, PDF, DOC, atau Video.</p>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 <strong>Unit BK SMP Negeri 56 Jakarta</strong> — Bidang Pribadi</p>
+<p style="margin-top:5px;">Materi: <a href="pengenalan-penerimaan-diri.html" target="_self">Pengenalan & Penerimaan Diri</a></p>
+</footer>
+
+<script>
+// ============================================
+// SISTEM PENYIMPANAN FILE (PERMANEN / LOCALSTORAGE)
+// - Data disimpan di localStorage browser
+// - Tidak hilang saat refresh halaman
+// - Hanya hilang jika diklik tombol hapus
+// ============================================
+
+const STORAGE_KEY = 'bk56_materi_pengenalan_diri_files';
+
+// Ambil data dari localStorage
+function getFiles() {
+const data = localStorage.getItem(STORAGE_KEY);
+return data ? JSON.parse(data) : [];
+}
+
+// Simpan data ke localStorage
+function saveFiles(files) {
+localStorage.setItem(STORAGE_KEY, JSON.stringify(files));
+}
+
+// Render daftar file
+function renderFiles(filter = 'all') {
+const files = getFiles();
+const fileList = document.getElementById('fileList');
+const emptyState = document.getElementById('emptyState');
+const fileCount = document.getElementById('fileCount');
+const clearAllBtn = document.getElementById('clearAllBtn');
+
+const filtered = filter === 'all' ? files : files.filter(f => f.category === filter);
+
+fileCount.textContent = files.length;
+clearAllBtn.style.display = files.length > 0 ? 'inline-block' : 'none';
+
+if (filtered.length === 0) {
+fileList.innerHTML = '';
+emptyState.style.display = 'block';
+if (files.length > 0 && filter !== 'all') {
+emptyState.querySelector('h3').textContent = 'Tidak Ada File untuk Kategori Ini';
+emptyState.querySelector('p').textContent = 'Coba pilih kategori lain atau tambahkan file baru.';
+} else {
+emptyState.querySelector('h3').textContent = 'Belum Ada File';
+emptyState.querySelector('p').textContent = 'Gunakan form di atas untuk menambahkan file PPT, PDF, DOC, atau Video.';
+}
+return;
+}
+
+emptyState.style.display = 'none';
+
+const iconMap = {
+ppt: { icon: '📊', label: 'PPT' },
+pdf: { icon: '📄', label: 'PDF' },
+doc: { icon: '📝', label: 'DOC' },
+video: { icon: '🎥', label: 'VIDEO' }
+};
+
+fileList.innerHTML = filtered.map(file => {
+const info = iconMap[file.category] || { icon: '📁', label: 'FILE' };
+return `
+<div class="file-item" data-id="${file.id}">
+<div class="file-top">
+<div class="file-icon ${file.category}">${info.icon}</div>
+<div class="file-info">
+<div class="file-title">${escapeHtml(file.title)}</div>
+<div class="file-category">${info.label}</div>
+</div>
+</div>
+<a href="${escapeHtml(file.url)}" target="_self" class="file-link" title="${escapeHtml(file.url)}">
+🔗 ${escapeHtml(file.url.length > 50 ? file.url.substring(0, 50) + '...' : file.url)}
+</a>
+<div class="file-actions">
+<button class="btn btn-danger" onclick="deleteFile('${file.id}')">🗑️ Hapus</button>
+</div>
+</div>
+`;
+}).join('');
+}
+
+// Escape HTML untuk keamanan
+function escapeHtml(text) {
+const div = document.createElement('div');
+div.textContent = text;
+return div.innerHTML;
+}
+
+// Tambah file baru
+document.getElementById('addFileForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const title = document.getElementById('fileTitle').value.trim();
+const category = document.getElementById('fileCategory').value;
+const url = document.getElementById('fileUrl').value.trim();
+
+if (!title || !category || !url) {
+alert('Mohon lengkapi semua field!');
+return;
+}
+
+const files = getFiles();
+const newFile = {
+id: 'file_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+title: title,
+category: category,
+url: url,
+createdAt: new Date().toISOString()
+};
+
+files.unshift(newFile); // Tambah di awal
+saveFiles(files);
+renderFiles();
+this.reset();
+
+// Feedback visual
+alert('✅ File "' + title + '" berhasil ditambahkan!\nFile tersimpan permanen di browser Anda.');
+});
+
+// Hapus file per item
+function deleteFile(id) {
+if (!confirm('Yakin ingin menghapus file ini?\nFile yang dihapus tidak dapat dikembalikan.')) return;
+let files = getFiles();
+files = files.filter(f => f.id !== id);
+saveFiles(files);
+renderFiles(currentFilter);
+}
+
+// Hapus semua file
+document.getElementById('clearAllBtn').addEventListener('click', function() {
+const files = getFiles();
+if (files.length === 0) return;
+if (!confirm(`Yakin ingin menghapus SEMUA ${files.length} file?\nTindakan ini tidak dapat dibatalkan.`)) return;
+localStorage.removeItem(STORAGE_KEY);
+renderFiles();
+});
+
+// Filter tabs
+let currentFilter = 'all';
+document.querySelectorAll('.filter-tab').forEach(tab => {
+tab.addEventListener('click', function() {
+document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+this.classList.add('active');
+currentFilter = this.dataset.filter;
+renderFiles(currentFilter);
+});
+});
+
+// Render awal
+renderFiles();
+</script>
+</body>
+</html>
