@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#e74c3c">
+<title>Pengenalan & Penerimaan Diri | BK SMPN 56 Jakarta — Bidang Pribadi</title>
+<meta name="description" content="Materi Bimbingan Konseling: Pengenalan & Penerimaan Diri untuk siswa SMP. Membantu memahami diri, menerima kelebihan dan kekurangan, serta membangun kepercayaan diri.">
+<meta name="keywords" content="pengenalan diri, penerimaan diri, BK SMP, bimbingan pribadi, materi BK kelas 7, self awareness, self acceptance">
+<meta name="author" content="Tim BK SMP Negeri 56 Jakarta">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://smpn56jkt.sch.id/bimbingan-konseling/pribadi/pengenalan-penerimaan-diri.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--primary: #1a5276;
+--secondary: #2980b9;
+--accent: #f39c12;
+--light: #ecf0f1;
+--dark: #2c3e50;
+--success: #27ae60;
+--white: #ffffff;
+--border: #e0e0e0;
+--pribadi: #e74c3c;
+--pribadi-dark: #c0392b;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body {
+font-family: 'Plus Jakarta Sans', 'Segoe UI', system-ui, sans-serif;
+line-height: 1.7;
+color: #333;
+background-color: #f5f6fa;
+-webkit-font-smoothing: antialiased;
+}
+
+/* === TOP BAR === */
+.top-bar {
+background: linear-gradient(135deg, var(--pribadi), var(--pribadi-dark));
+color: #fff;
+padding: 10px 20px;
+font-size: 0.82rem;
+text-align: center;
+}
+.top-bar a { color: #ffd700; text-decoration: none; font-weight: 600; }
+.top-bar a:hover { text-decoration: underline; }
+
+/* === HEADER === */
+.page-header {
+background: linear-gradient(135deg, var(--pribadi), var(--pribadi-dark));
+color: var(--white);
+padding: 50px 20px 40px;
+text-align: center;
+position: relative;
+overflow: hidden;
+}
+.page-header::before {
+content: '🧠';
+position: absolute;
+font-size: 15rem;
+opacity: 0.08;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.breadcrumb-materi {
+display: inline-flex;
+gap: 8px;
+align-items: center;
+background: rgba(255,255,255,0.15);
+padding: 6px 16px;
+border-radius: 20px;
+font-size: 0.82rem;
+margin-bottom: 20px;
+backdrop-filter: blur(10px);
+}
+.breadcrumb-materi a { color: #fff; text-decoration: none; }
+.breadcrumb-materi a:hover { text-decoration: underline; }
+.page-header h1 {
+font-size: 2.3rem;
+font-weight: 800;
+margin-bottom: 12px;
+position: relative;
+}
+.page-header .subtitle {
+font-size: 1.05rem;
+opacity: 0.95;
+max-width: 700px;
+margin: 0 auto;
+position: relative;
+}
+.badge-bidang {
+display: inline-block;
+background: rgba(255,255,255,0.2);
+padding: 5px 14px;
+border-radius: 15px;
+font-size: 0.78rem;
+font-weight: 600;
+margin-top: 15px;
+position: relative;
+}
+
+/* === NAV INTERNAL === */
+.internal-nav {
+background: var(--white);
+border-bottom: 2px solid var(--border);
+position: sticky;
+top: 0;
+z-index: 100;
+box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+overflow-x: auto;
+}
+.internal-nav ul {
+list-style: none;
+display: flex;
+justify-content: center;
+flex-wrap: nowrap;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 10px;
+}
+.internal-nav ul li a {
+color: var(--dark);
+text-decoration: none;
+padding: 14px 18px;
+display: block;
+font-size: 0.85rem;
+font-weight: 500;
+white-space: nowrap;
+border-bottom: 3px solid transparent;
+transition: all 0.3s;
+}
+.internal-nav ul li a:hover,
+.internal-nav ul li a.active {
+color: var(--pribadi);
+border-bottom-color: var(--pribadi);
+background: rgba(231, 76, 60, 0.05);
+}
+
+/* === MAIN CONTENT === */
+.container {
+max-width: 900px;
+margin: 0 auto;
+padding: 40px 20px;
+}
+.materi-section {
+background: var(--white);
+border-radius: 15px;
+padding: 35px;
+margin-bottom: 30px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+border-left: 5px solid var(--pribadi);
+}
+.materi-section h2 {
+color: var(--pribadi-dark);
+font-size: 1.5rem;
+margin-bottom: 18px;
+display: flex;
+align-items: center;
+gap: 10px;
+font-weight: 700;
+}
+.materi-section h2 .sec-icon {
+background: linear-gradient(135deg, var(--pribadi), var(--pribadi-dark));
+color: #fff;
+width: 40px;
+height: 40px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.2rem;
+flex-shrink: 0;
+}
+.materi-section p {
+color: #444;
+font-size: 0.95rem;
+margin-bottom: 12px;
+text-align: justify;
+}
+.materi-section ul, .materi-section ol {
+margin: 12px 0 12px 20px;
+color: #444;
+}
+.materi-section li {
+margin-bottom: 8px;
+font-size: 0.93rem;
+}
+.materi-section strong { color: var(--pribadi-dark); }
+
+/* === HIGHLIGHT BOX === */
+.highlight-box {
+background: linear-gradient(135deg, #fdecea, #fbd5cf);
+border-left: 4px solid var(--pribadi);
+padding: 18px 22px;
+border-radius: 10px;
+margin: 18px 0;
+}
+.highlight-box h4 {
+color: var(--pribadi-dark);
+margin-bottom: 8px;
+font-size: 1rem;
+}
+.highlight-box p {
+font-size: 0.9rem;
+margin: 0;
+}
+
+/* === QUOTE === */
+.quote-box {
+background: linear-gradient(135deg, #fff3cd, #ffe69c);
+border-radius: 12px;
+padding: 25px 30px;
+margin: 25px 0;
+position: relative;
+font-style: italic;
+color: #6d4c00;
+text-align: center;
+font-size: 1.05rem;
+}
+.quote-box::before {
+content: '"';
+position: absolute;
+top: -10px;
+left: 15px;
+font-size: 4rem;
+color: var(--accent);
+opacity: 0.4;
+font-family: Georgia, serif;
+}
+
+/* === CTA === */
+.cta-box {
+background: linear-gradient(135deg, var(--pribadi), var(--pribadi-dark));
+color: #fff;
+padding: 30px;
+border-radius: 15px;
+text-align: center;
+margin: 30px 0;
+}
+.cta-box h3 {
+font-size: 1.3rem;
+margin-bottom: 10px;
+}
+.cta-box p {
+opacity: 0.95;
+margin-bottom: 18px;
+}
+.btn-cta {
+display: inline-block;
+background: var(--white);
+color: var(--pribadi-dark);
+padding: 12px 28px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 600;
+transition: all 0.3s;
+margin: 5px;
+}
+.btn-cta:hover {
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* === FOOTER === */
+footer {
+background: var(--dark);
+color: #bbb;
+text-align: center;
+padding: 25px 20px;
+font-size: 0.85rem;
+}
+footer a { color: var(--accent); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+.page-header h1 { font-size: 1.7rem; }
+.materi-section { padding: 25px 20px; }
+.materi-section h2 { font-size: 1.25rem; }
+.internal-nav ul { justify-content: flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+📚 Materi Bidang Pribadi |
+<a href="../index.html" target="_self">🏠 BK SMPN 56</a> |
+<a href="evaluasi-proses.html" target="_self">📋 Evaluasi Proses</a> |
+<a href="evaluasi-hasil.html" target="_self">📊 Evaluasi Hasil</a> |
+<a href="materi-resources.html" target="_self">📎 Download Materi</a>
+</div>
+
+<!-- HEADER -->
+<header class="page-header">
+<div class="breadcrumb-materi">
+<a href="../index.html" target="_self">BK</a> ›
+<a href="../index.html#bidang-layanan" target="_self">Bidang Pribadi</a> ›
+<span>Pengenalan & Penerimaan Diri</span>
+</div>
+<h1>🧠 Pengenalan & Penerimaan Diri</h1>
+<p class="subtitle">Mengenal diri adalah langkah pertama menuju kedewasaan. Mari belajar memahami dan menerima diri sendiri secara utuh.</p>
+<span class="badge-bidang">Bidang Pribadi • Kelas VII - IX SMP</span>
+</header>
+
+<!-- INTERNAL NAV -->
+<nav class="internal-nav" aria-label="Navigasi Materi">
+<ul>
+<li><a href="#pendahuluan" class="active">Pendahuluan</a></li>
+<li><a href="#pemahaman">Pemahaman</a></li>
+<li><a href="#materi-inti">Materi Inti</a></li>
+<li><a href="#permasalahan">Permasalahan</a></li>
+<li><a href="#solusi">Solusi</a></li>
+<li><a href="#kesimpulan">Kesimpulan</a></li>
+</ul>
+</nav>
+
+<main class="container">
+
+<!-- PENDAHULUAN -->
+<section class="materi-section" id="pendahuluan">
+<h2><span class="sec-icon">1</span> Pendahuluan</h2>
+<p>Pernahkah kamu bertanya, <strong>"Siapa aku sebenarnya?"</strong> Pertanyaan sederhana ini ternyata merupakan awal dari perjalanan penting dalam hidup setiap manusia. Masa SMP adalah fase di mana kamu mulai banyak mengalami perubahan — baik secara fisik, emosi, maupun cara berpikir.</p>
+<p>Pengenalan dan penerimaan diri menjadi fondasi utama bagi perkembangan pribadi yang sehat. Ketika kamu mampu mengenali siapa dirimu — termasuk kelebihan, kekurangan, minat, dan nilai-nilai yang kamu pegang — kamu akan lebih mudah mengambil keputusan, menghadapi tantangan, dan membangun hubungan yang baik dengan orang lain.</p>
+<p>Materi ini dirancang khusus untuk membantumu memahami konsep <strong>pengenalan diri</strong> dan <strong>penerimaan diri</strong>, serta memberikan panduan praktis untuk menerapkannya dalam kehidupan sehari-hari sebagai siswa SMP.</p>
+
+<div class="highlight-box">
+<h4>🎯 Tujuan Pembelajaran</h4>
+<p>Setelah mempelajari materi ini, siswa diharapkan mampu: (1) Menjelaskan pengertian pengenalan dan penerimaan diri, (2) Mengidentifikasi kelebihan dan kekurangan diri sendiri, (3) Menerima diri secara utuh dengan positif, dan (4) Mengembangkan sikap percaya diri yang sehat.</p>
+</div>
+</section>
+
+<!-- PEMAHAMAN -->
+<section class="materi-section" id="pemahaman">
+<h2><span class="sec-icon">2</span> Pemahaman Konsep</h2>
+<p>Sebelum melangkah lebih jauh, mari kita pahami dua konsep kunci yang akan menjadi pondasi materi ini:</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 18px 0 10px;">🔍 Apa itu Pengenalan Diri?</h3>
+<p><strong>Pengenalan diri</strong> (self-awareness) adalah kemampuan untuk melihat, memahami, dan menyadari siapa diri kita secara mendalam. Ini mencakup kesadaran akan:</p>
+<ul>
+<li><strong>Kepribadian</strong> — sifat, watak, dan karakter yang melekat pada diri</li>
+<li><strong>Emosi</strong> — perasaan yang sering muncul dan cara kita meresponsnya</li>
+<li><strong>Minat & bakat</strong> — hal-hal yang kita sukai dan kuasai</li>
+<li><strong>Nilai-nilai hidup</strong> — prinsip yang kita pegang dalam bertindak</li>
+<li><strong>Kelebihan & kekurangan</strong> — potensi dan area yang perlu dikembangkan</li>
+</ul>
+
+<h3 style="color:var(--pribadi-dark); margin: 18px 0 10px;">🤗 Apa itu Penerimaan Diri?</h3>
+<p><strong>Penerimaan diri</strong> (self-acceptance) adalah sikap menerima diri sendiri secara utuh — baik kelebihan maupun kekurangan — tanpa syarat. Bukan berarti berhenti berkembang, melainkan <strong>berdamai dengan diri sendiri</strong> sebagai langkah awal untuk tumbuh menjadi versi terbaik.</p>
+
+<div class="quote-box">
+Kamu tidak harus sempurna untuk menjadi berharga. Kamu sudah berharga karena kamu adalah dirimu sendiri.
+</div>
+
+<p>Pengenalan diri dan penerimaan diri saling melengkapi. Kamu tidak bisa menerima apa yang tidak kamu kenali. Sebaliknya, mengenali diri tanpa menerima akan membuatmu terus-menerus merasa tidak cukup.</p>
+</section>
+
+<!-- MATERI INTI -->
+<section class="materi-section" id="materi-inti">
+<h2><span class="sec-icon">3</span> Materi Inti</h2>
+
+<h3 style="color:var(--pribadi-dark); margin-bottom: 12px;">🌟 A. Ciri-Ciri Siswa yang Menerima Diri</h3>
+<ol>
+<li><strong>Percaya diri, bukan sombong</strong> — yakin pada kemampuan sendiri tanpa merendahkan orang lain</li>
+<li><strong>Berani jujur</strong> — mengakui kesalahan dan kekurangan tanpa takut dihakimi</li>
+<li><strong>Tidak mudah membandingkan diri</strong> — fokus pada perkembangan diri sendiri</li>
+<li><strong>Mampu menerima kritik</strong> — melihat kritik sebagai bahan introspeksi, bukan serangan</li>
+<li><strong>Bersyukur</strong> — menghargai apa yang dimiliki, bukan terus mengeluh</li>
+<li><strong>Punya tujuan hidup</strong> — tahu arah dan mau berusaha mencapainya</li>
+</ol>
+
+<h3 style="color:var(--pribadi-dark); margin: 20px 0 12px;">📋 B. Langkah-Langkah Mengenal Diri</h3>
+<ol>
+<li><strong>Refleksi diri</strong> — luangkan waktu 10 menit setiap hari untuk bertanya: "Apa yang aku rasakan hari ini?"</li>
+<li><strong>Tulis jurnal</strong> — catat perasaan, pengalaman, dan hal yang kamu syukuri</li>
+<li><strong>Minta umpan balik</strong> — tanyakan pada orang terdekat: "Menurutmu, apa kelebihan dan kekuranganku?"</li>
+<li><strong>Coba hal baru</strong> — ikuti ekstrakurikuler, lomba, atau kegiatan yang belum pernah dicoba</li>
+<li><strong>Ikuti tes minat bakat</strong> — manfaatkan layanan asesmen dari guru BK</li>
+</ol>
+
+<h3 style="color:var(--pribadi-dark); margin: 20px 0 12px;">💪 C. Cara Menerima Diri Secara Sehat</h3>
+<ul>
+<li><strong>Berhenti membandingkan</strong> dengan teman di media sosial — setiap orang punya perjalanannya sendiri</li>
+<li><strong>Rayakan pencapaian kecil</strong> — sekecil apapun, itu adalah progres</li>
+<li><strong>Maafkan diri sendiri</strong> — semua orang pernah berbuat salah, yang penting belajar darinya</li>
+<li><strong>Kelilingi diri dengan orang positif</strong> — teman yang mendukung akan membantumu tumbuh</li>
+<li><strong>Jaga kesehatan fisik</strong> — tidur cukup, makan bergizi, olahraga rutin. Tubuh yang sehat mendukung pikiran yang sehat</li>
+</ul>
+
+<div class="highlight-box">
+<h4>💡 Tahukah Kamu?</h4>
+<p>Menurut psikolog Abraham Maslow, <em>self-acceptance</em> adalah salah satu ciri utama orang yang mencapai aktualisasi diri — tingkatan tertinggi dalam perkembangan manusia. Artinya, menerima diri adalah kunci untuk menjadi versi terbaik dari dirimu!</p>
+</div>
+</section>
+
+<!-- PERMASALAHAN -->
+<section class="materi-section" id="permasalahan">
+<h2><span class="sec-icon">4</span> Permasalahan yang Sering Muncul</h2>
+<p>Dalam proses pengenalan dan penerimaan diri, siswa SMP sering menghadapi beberapa tantangan berikut:</p>
+
+<ol>
+<li>
+<strong>📱 Pengaruh media sosial</strong>
+<p>Terus-menerus melihat kehidupan "sempurna" orang lain di Instagram, TikTok, atau YouTube membuat banyak siswa merasa dirinya kurang menarik, kurang pintar, atau kurang beruntung.</p>
+</li>
+<li>
+<strong>👥 Tekanan teman sebaya (peer pressure)</strong>
+<p>Ingin diterima oleh kelompok tertentu membuat sebagian siswa terpaksa mengubah kepribadian, gaya, atau bahkan nilai-nilai yang dipegangnya.</p>
+</li>
+<li>
+<strong>🎭 Rasa rendah diri (inferior)</strong>
+<p>Merasa "lebih buruk" dari teman-teman karena nilai, fisik, ekonomi keluarga, atau prestasi. Perasaan ini bisa memicu menarik diri dari pergaulan.</p>
+</li>
+<li>
+<strong>🏠 Ekspektasi orang tua yang tinggi</strong>
+<p>Tuntutan untuk selalu berprestasi atau menjadi "seperti anak orang lain" membuat siswa kehilangan jati diri dan merasa tidak pernah cukup.</p>
+</li>
+<li>
+<strong>🪞 Ketidakpuasan terhadap fisik</strong>
+<p>Perubahan tubuh di masa pubertas sering membuat siswa cemas, malu, atau bahkan membenci tubuhnya sendiri.</p>
+</li>
+<li>
+<strong>🤐 Takut berbeda</strong>
+<p>Merasa punya minat, hobi, atau pandangan yang berbeda dari mayoritas membuat siswa takut di-bully atau dikucilkan.</p>
+</li>
+</ol>
+</section>
+
+<!-- SOLUSI -->
+<section class="materi-section" id="solusi">
+<h2><span class="sec-icon">5</span> Solusi atas Permasalahan</h2>
+<p>Setiap permasalahan pasti ada solusinya. Berikut langkah-langkah praktis yang bisa kamu lakukan:</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 1. Batasi Penggunaan Media Sosial</h3>
+<p>Tetapkan waktu tertentu untuk berselancar di media sosial. Ingat: apa yang kamu lihat di layar adalah <strong>kurasi terbaik</strong> dari hidup seseorang, bukan keseluruhan realitas. Fokuslah pada hidupmu sendiri.</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 2. Temukan "Suku"-mu</h3>
+<p>Bergabunglah dengan komunitas atau ekstrakurikuler yang sesuai minatmu — entah itu robotik, seni, olahraga, atau keagamaan. Di sana kamu akan menemukan teman-teman yang menghargai dirimu apa adanya.</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 3. Tulis "Surat untuk Diriku"</h3>
+<p>Cobalah menulis surat untuk dirimu sendiri: ceritakan apa yang kamu sukai dari dirimu, apa yang ingin kamu kembangkan, dan janji untuk selalu mendukung dirimu. Baca ulang saat kamu merasa down.</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 4. Bicara dengan Orang Dewasa yang Dipercaya</h3>
+<p>Orang tua, guru, atau konselor BK siap mendengarkan. Kamu tidak harus menanggung semuanya sendirian. <strong>Berbicara adalah tanda kekuatan, bukan kelemahan.</strong></p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 5. Fokus pada Progres, Bukan Kesempurnaan</h3>
+<p>Ubah kalimat <em>"Aku harus sempurna"</em> menjadi <em>"Aku sedang berkembang"</em>. Setiap langkah kecil adalah kemajuan.</p>
+
+<h3 style="color:var(--pribadi-dark); margin: 15px 0 10px;">✅ 6. Terima Tubuhmu dengan Kasih</h3>
+<p>Tubuhmu adalah anugerah yang membawamu melewati setiap hari. Rawatlah dengan baik — makan bergizi, olahraga, tidur cukup — bukan untuk terlihat sempurna, tapi untuk <strong>sehat dan bahagia</strong>.</p>
+
+<div class="quote-box">
+Kamu tidak perlu menjadi orang lain untuk menjadi berharga. Jadilah versi terbaik dari dirimu sendiri.
+</div>
+</section>
+
+<!-- KESIMPULAN -->
+<section class="materi-section" id="kesimpulan">
+<h2><span class="sec-icon">6</span> Kesimpulan</h2>
+<p>Pengenalan dan penerimaan diri adalah <strong>perjalanan seumur hidup</strong>, bukan tujuan yang harus dicapai dalam semalam. Sebagai siswa SMP, kamu berada di fase yang tepat untuk mulai membangun fondasi ini.</p>
+<p>Ingatlah tiga hal penting:</p>
+<ol>
+<li><strong>Kamu unik</strong> — tidak ada satu pun orang di dunia ini yang persis sama denganmu. Itu adalah kekuatan, bukan kelemahan.</li>
+<li><strong>Kamu berharga</strong> — terlepas dari segala kekuranganmu, kamu layak dicintai dan dihargai, terutama oleh dirimu sendiri.</li>
+<li><strong>Kamu bisa berkembang</strong> — menerima diri bukan berarti berhenti berusaha. Justru dengan menerima diri, kamu punya energi lebih untuk tumbuh.</li>
+</ol>
+
+<div class="highlight-box">
+<h4>🌈 Pesan Penutup</h4>
+<p>Jadilah sahabat terbaik untuk dirimu sendiri. Kenali dirimu, cintai dirimu, dan izinkan dirimu untuk tumbuh dengan caramu sendiri. Kamu lebih kuat, lebih pintar, dan lebih berharga dari yang kamu bayangkan.</p>
+</div>
+
+<div class="cta-box">
+<h3>📝 Lanjutkan Evaluasi</h3>
+<p>Setelah mempelajari materi, lanjutkan dengan mengisi instrumen evaluasi untuk mengukur pemahamanmu.</p>
+<a href="evaluasi-hasil.html" target="_self" class="btn-cta">📊 Isi Evaluasi Hasil (Siswa)</a>
+<a href="evaluasi-proses.html" target="_self" class="btn-cta">📋 Evaluasi Proses (Guru BK)</a>
+<a href="materi-resources.html" target="_self" class="btn-cta">📂 Download Materi</a>
+<a href="../index.html#bidang-layanan" target="_self" class="btn-cta">🏠 Kembali ke Bidang Layanan</a>
+</div>
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 <strong>Unit BK SMP Negeri 56 Jakarta</strong> — Bidang Pribadi</p>
+<p style="margin-top:5px;">Bagian dari <a href="../index.html" target="_self">smpn56jkt.sch.id/bimbingan-konseling</a></p>
+</footer>
+
+<script>
+// Highlight nav aktif saat scroll
+const navLinks = document.querySelectorAll('.internal-nav ul li a');
+const sections = document.querySelectorAll('.materi-section');
+window.addEventListener('scroll', () => {
+let current = '';
+sections.forEach(sec => {
+if (window.scrollY >= sec.offsetTop - 120) current = sec.id;
+});
+navLinks.forEach(link => {
+link.classList.remove('active');
+if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+});
+}, { passive: true });
+</script>
+</body>
+</html>
